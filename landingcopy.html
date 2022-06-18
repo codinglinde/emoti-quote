@@ -1,0 +1,84 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--This is the Emoti-quote landing page-->
+    <title>Emoti-Quote by CFG-WEBDEV-Team2</title>
+    <link rel="stylesheet" href="./landing copy.css" />
+    <!--NOTE TO TEAM: to discuss the fonts we will use for the project-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="header">
+        <img
+          class="logo"
+          src="./Images/Emoti-Quote Logo 2.png"
+          alt="Emoti-quote logo"
+        />
+        <div class="hamburger">
+          <label for="toggle">&#9776;</label>
+          <input type="checkbox" id="toggle" />
+          <ul class="list">
+            <li><a class="nav-link" href="#aboutus"> About us </a></li>
+            <li><a class="nav-link" href="contact_us.html"> Contact us </a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="mainpage">
+        <h1>Emoti-quote</h1>
+        <h4 id="description">quotes for every feeling...</h4>
+      </div>
+
+      <h3>I am feeling...</h3>
+
+      <div class="dropdown-content" id="dropdown content" style="width: 200px">
+        <form>
+          <select name="emotions" id="emotions" onchange="update()">
+            <option value="">Select Emotion</option>
+            <option value="1">lonely</option>
+            <option value="2">love</option>
+            <option value="3">nervous</option>
+            <option value="4">nostalgic</option>
+            <option value="5">offended</option>
+            <option value="6">peaceful</option>
+            <option value="7">rage</option>
+            <option value="8">regretful</option>
+            <option value="sad">sad</option>
+            <option value="uncertain">uncertain</option>
+            <option value="uneasy">uneasy</option>
+            <option value="weak">offended</option>
+            <option value="determined">determined</option>
+            <option value="disbelief">disbelief</option>
+            <option value="doubtful">doubtful</option>
+            <option value="envious">envious</option>
+            <option value="grateful">grateful</option>
+            <option value="guilty">guilty</option>
+            <option value="happy">happy</option>
+            <option value="hatred">hatred</option>
+            <option value="humiliated">humiliated</option>
+            <option value="hurt">hurt</option>
+          </select>
+        </form>
+      </div>
+
+      <div class="lonely"></div>
+    </main>
+
+    <footer>
+      <!--Aisha is unsure what to put in the header.-->
+    </footer>
+
+    <script src="landing copy.js"></script>
+  </body>
+</html>

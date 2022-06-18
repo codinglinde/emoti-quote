@@ -1,0 +1,214 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--This is the Emoti-quote landing page-->
+    <title>Emoti-Quote by CFG-WEBDEV-Team2</title>
+    <link rel="stylesheet" href="./wickedcss.min.css" />
+    <link rel="stylesheet" href="./landing.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #f1faee;
+      font-family: "Libre Baskerville", serif;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      background-image: url(./Images/image5.jpeg);
+    }
+
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .logo {
+      float: left;
+      width: 200px;
+      height: 100px;
+      margin-right: 20px;
+    }
+
+    .list li {
+      float: left;
+      list-style: none;
+      text-align: center;
+      background-color: #320e3b;
+      width: 120px;
+      line-height: 40px;
+      margin-right: 30px;
+      border-radius: 10px;
+    }
+
+    .list li a {
+      text-decoration: none;
+      color: #f1faee;
+      display: block;
+      font-weight: bold;
+    }
+
+    .list li a:hover {
+      text-decoration: none;
+      color: #1f2f16;
+      background-color: #aaa1c8;
+      border-radius: 10px;
+    }
+
+    .mainpage {
+      text-align: center;
+      color: #320e3b;
+      padding-top: 50px;
+    }
+
+    .heartbeat {
+      font-size: 50px;
+    }
+
+    #description {
+      padding: 30px 0;
+    }
+
+    h3 {
+      text-align: center;
+      color: #320e3b;
+    }
+
+    .dropbtn {
+      background-color: #320e3b;
+      color: #f1faee;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      right: auto;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+      -o-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      margin-top: 50px;
+      max-height: 200px;
+      overflow: scroll;
+    }
+
+    .dropdown-content a {
+      color: #320e3b;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #aaa1c8;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #aaa1c8;
+    }
+
+    @media only screen and (max-width: 500px) {
+      label {
+        display: block;
+        cursor: pointer;
+      }
+
+      .list li {
+        text-align: center;
+        width: 100%;
+        display: none;
+      }
+
+      .list li a {
+        display: block;
+        border-bottom: 1px solid #eaeaeb;
+        margin: 0;
+      }
+
+      #toggle:checked + .list li {
+        display: block;
+      }
+      .heartbeat {
+        font-size: 25px;
+      }
+    }
+  </style>
+  <body>
+    <header>
+      <nav class="header">
+        <img
+          class="logo"
+          src="./Images/Emoti-quote logo backgroundless.png"
+          alt="Emoti-quote logo"
+        />
+        <div class="hamburger">
+          <label for="toggle">&#9776;</label>
+          <input type="checkbox" id="toggle" />
+          <ul class="list">
+            <li>
+              <a class="nav-link" href="realcfgaboutus.html"> About us </a>
+            </li>
+            <li><a class="nav-link" href="contact_us.html"> Contact us </a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="mainpage">
+        <div class="heartbeat">EMOTI-QUOTE</div>
+        <h4 id="description">
+          In a world of increased awareness of mental health and wellbeing,
+          EMOTI-QUOTE offers you "a quote for every feeling" in just a few
+          clicks!
+        </h4>
+      </div>
+
+      <h3>I am feeling...</h3>
+
+      <div class="dropdown">
+        <button class="dropbtn">select emotion</button>
+        <div class="dropdown-content">
+          <a href="quote1.html">Rage</a>
+          <a href="quote2.html">Grateful</a>
+          <a href="quote3.html">Sad</a>
+          <a href="quote4.html">Nervous</a>
+          <a href="quote5.html">Peaceful</a>
+          <a href="quote6.html">Love</a>
+          <a href="quote7.html">Doubtful</a>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

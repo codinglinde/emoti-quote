@@ -1,0 +1,361 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--This is the Emoti-quote landing page-->
+        <title>About Us</title>
+        <link rel=“preconnect” href=“https://fonts.googleapis.com”>
+    <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin>
+    <link href=“https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap” rel=“stylesheet”>
+    </head>
+    <style>
+      * {
+      box-sizing: border-box;
+      }
+      body{
+        background-color: #F1FAEE;
+        font-family: ‘Libre Baskerville’, serif;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-image: url(./Images/image5.jpeg);
+      }
+      .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .logo{
+        float: left;
+        width: 200px;
+        height: 100px;
+        margin-right: 20px;
+      }
+      .list li a{
+        text-decoration: none;
+        color: #F1FAEE;
+        display: block;
+        font-weight: bold;
+      }
+      .list li a:hover{
+        text-decoration: none;
+        color: #1F2F16;
+        background-color: #AAA1C8;
+        border-radius: 10px;
+      }
+      .hamburger label{
+        margin: 0;
+        font-size: 26px;
+        line-height: 70px;
+        display: none;
+        float: left;
+      }
+      #toggle{
+          display: none;
+      }
+
+      @media only screen and (max-width: 500px){
+        label{
+          display: block;
+          cursor: pointer;
+        }
+        .list li{
+            text-align: center;
+            width: 100%;
+            display: none;
+        }
+        .list li a{
+            display: block;
+            border-bottom: 1px solid #EAEAEB;
+            margin: 0;
+        }
+        #toggle:checked + .list li{
+            display: block;
+        }
+      }
+
+      h1 {
+        text-align: center;
+        color: #320e3b;
+      }
+
+      h2 {
+        text-align: center;
+        border: 1px solid #320e3b;
+        padding: 15px;
+        font-size: 14px;
+        border-radius: 4px;
+        display: block;
+        color: #320e3b;
+        font-weight: 600;
+        line-height: 35px;
+        font-family: "Roboto", sans-serif;
+        margin: 0 auto;
+      }
+
+      background {
+        background: #f1faee;
+      }
+
+      .container {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        margin: 20px 0 20px;
+        display: inline-block;
+      }
+
+      .image {
+        display: block;
+        width: 250px;
+        height: 250px;
+        color: #320e3b;
+      }
+
+      .text {
+        color: #320e3b;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: sans-serif;
+      }
+
+      .textBottom {
+        color: #320e3b;
+        font-size: 10px;
+        font-family: sans-serif;
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        bottom: 0%;
+        text-align: center;
+      }
+      .overlay {
+        position: absolute;
+        opacity: 0;
+        transition: all 0.3s ease;
+        background-color: #f1faee;
+      }
+      .container:hover .overlay {
+        opacity: 0.9;
+        cursor: pointer;
+        color: #1f2f16;
+        background-color: #aaa1c8;
+        border-color: #aaa1c8;
+      }
+      .overlayTop {
+        width: 100%;
+        height: 0;
+        top: 0;
+        left: 0;
+        background-color: #320e3b;
+      }
+      .overlayBottom {
+        width: 100%;
+        height: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #320e3b;
+      }
+      .container:hover .overlayTop,
+      .container:hover .overlayBottom {
+        height: 100%;
+      }
+
+      p {
+        text-align: center;
+        line-height: 1.5;
+        margin: 20px 0 10px;
+        color: #404448;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 35px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      button {
+        color: #f1faee;
+        font-family: "Roboto", sans-serif;
+        border: 1px solid #320e3b;
+        font-size: 14px;
+        display: block;
+        margin: 40px auto;
+        background-color: #320e3b;
+        padding: 10px 20px;
+        border-radius: 6px;
+        box-shadow: 2px 2px 3px rgb(129 134 138 / 40%);
+        transition: all 250ms ease-in-out;
+      }
+
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+        color: #1f2f16;
+        background-color: #aaa1c8;
+        border-color: #aaa1c8;
+      }
+
+      .containerTop {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 15px 60px;
+      }
+
+      .feedback {
+        color: #320e3b;
+        text-decoration: none;
+        font-size: 12px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .feedback :hover {
+        text-decoration: underline;
+      }
+
+      hr {
+        length: 685px;
+        border: 2px solid #320e3b;
+        background-color: #320e3b;
+        margin: 8px 0px;
+        display: block;
+        unicode-bidi: isolate;
+        margin-block-start: 0.5em;
+        margin-block-end: 0.5em;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        overflow: hidden;
+        border-style: inset;
+        border-width: 1px;
+      }
+
+      .footer {
+        text-align: center;
+        font-size: 12px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+      }
+
+    </style>
+  </head>
+      <body>
+        <header> 
+            <nav class=“header”>
+      <img class=“logo” src=“./Images/Emoti-quote logo backgroundless.png” alt=“Emoti-quote logo”>
+      <div class=“hamburger”>
+        <label for=“toggle”>&#9776;</label>
+        <input type=“checkbox” id=“toggle” />
+        <ul class=“list”>
+          <li><a class=“nav-link” href=“about_us_code.html”> About us </a></li>
+          <li><a class=“nav-link” href=“landingbackup.html”> Homepage </a></li>
+        </ul>
+      </div>
+    </nav>
+        </header>
+  <body style="background-color: #f1faee;">
+    <div class="containerTop">
+      <h1>👩🏾‍💻👩🏾‍💻 About Us 👩🏾‍💻👩🏽‍💻👩🏽‍💻</h1>
+      <h2>
+        Emoti-Quote was created over by 5 amazing women as part of a project. Hover over each image to find out more about the ladies involved.
+      </h2>
+
+      <div align="center">
+      <div>
+        <div class="container">
+          <img src="./Images/aisha.jpg" alt="Aisha" class="image" />
+          <div class="overlay overlayTop">
+            <div class="text">- Aisha Yusuff</div>
+            <div class="text textBottom">
+              'A sprinkle of books, deen, yoga, plants, kdramas and travel — and
+              I'm your gal' </pre>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <img src="./Images/linde.jpg" alt="Linde" class="image" />
+          <div class="overlay overlayTop">
+            <div class="text">- Lindelani Moyo</div>
+            <div class="text textBottom">
+            'Let's Coffee and Code? Or, Lo-fi and Chill?' </pre>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <img src="./Images/asma.jpg" alt="Asma" class="image" />
+          <div class="overlay overlayTop">
+            <div class="text">- Asma M</div>
+            <div class="text textBottom">
+            'Every moment is a fresh beginning' </pre>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="container">
+          <img src="./Images/fatima.jpg" alt="Fatima" class="image" />
+          <div class="overlay overlayBottom">
+            <div class="text">- Fatima Sheikhnur</div>
+            <div class="text textBottom">
+            'Each day provides its own gifts' </pre>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <img src="./Images/shayli.jpg" alt="Shayli" class="image" />
+          <div class="overlay overlayBottom">
+            <div class="text">- Shayli Patel</div>
+            <div class="text textBottom">
+            'Train your mind to see the good in every situation' </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <p><b>Why we chose to do this...</b></p>
+      <p>
+        We decided as a group to focus on the topic of mental health, which has
+        been on the rise in recent years, particularly with the increasing
+        number of young people being diagnosed with mental health issues. It can
+        be difficult to express how you feel on a daily basis, and this
+        difficulty is frequently linked to mental health, particularly when you
+        can't put your feelings into words or think clearly about them.
+      </p>
+      <p>
+        We decided to make a website based on the TikTok-famous reversible
+        octopus plushie, which has been shown to help people physically express
+        their emotions by allowing them to flip its two colourful sides (one
+        happy side, one sad side). Our website allows users to choose an emotion
+        they are experiencing right now and receive a positive quote that will
+        hopefully make them smile.
+      </p>
+      <p>So tell us, how are you feeling today?</p>
+
+      <button class="buy-button">Could we get your feedback?</button>
+      <hr />
+      <p class="footer">
+        <b> This website was coded by the Emoti-Quote team! </b>
+      </p>
+    </div>
+    <script>
+      function buy() {
+        let name = prompt("What is your name?");
+        let emoji = prompt("What is your favorite emoji?");
+        let website = prompt("How did you find our website? Do you like it?");
+
+        alert(
+          "Thank you, " +
+            name +
+            " for visiting our page and giving us feedback! The Emoti-Quote team really appreciate it! " +
+            emoji
+        );
+      }
+
+      let buyButton = document.querySelector(".buy-button");
+      buyButton.addEventListener("click", buy);
+    </script>
+  </body>
+</html>
